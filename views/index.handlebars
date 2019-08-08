@@ -1,0 +1,71 @@
+<div class="container-fluid">
+    <div id="burgerAndTitle">
+        
+        <div id="title">
+            <h1>Eat-Da-Burger!</h1>
+        </div>
+        <div id="burgerImage">
+            <img src="./assets/images/burger.jpg">
+        </div>
+    </div>
+    <div id="currentBurgers">
+        <div class="row">
+            <div class="col">
+                <div id="undevoured">
+                    {{#each undevoured}}
+
+                    <p>{{id}}</p>
+
+
+                    <p>Burger: {{burgerName}}</p>
+
+                    <button type="button" class="btn btn-primary btn-sm btnID" id={{id}}>Devour</button>
+                    {{/each}}
+
+                </div>
+            </div>
+            <hr>
+            <div class="col">
+                <div id="devoured">
+
+                    {{#each devoured}}
+
+
+                    <p>{{id}}</p>
+
+
+                    <p>Burger: {{burgerName}}</p>
+
+
+
+
+                    {{/each}}
+                </div>
+            </div>
+            <hr>
+
+
+        </div>
+
+    </div>
+
+</div>
+<div id="inputAndSubmit">
+    <div id="input">
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Type Here!</span>
+            </div>
+            <input type="text" class="form-control" id="inputID" placeholder="Burger name" aria-label="Username"
+                aria-describedby="addon-wrapping">
+        </div>
+    </div>
+    <div id="submit">
+        <button type="button" class="btn btn-info" id="submitButton">Submit!</button>
+    </div>
+    <div id="instructions">
+        <p>Enter a burger you want to eat! Then click the submit button!</p>
+    </div>
+</div>
+
+</div>
