@@ -5,19 +5,20 @@
             <h1>Eat-Da-Burger!</h1>
         </div>
         <div id="burgerImage">
-            <img src="./assets/images/burger.jpg">
+            <img id="actualImage"src="./assets/images/burger.jpg">
         </div>
     </div>
     <div id="currentBurgers">
         <div class="row">
-            <div class="col">
-                <div id="undevoured">
+            <div class="col-6">
+                <h1>Burgers to eat!</h1>
+                <div class="undevoured">
                     {{#each undevoured}}
 
-                    <p>{{id}}</p>
+   
 
 
-                    <p>Burger: {{burgerName}}</p>
+                    <p>{{burgerName}}</p>
 
                     <button type="button" class="btn btn-primary btn-sm btnID" id={{id}}>Devour</button>
                     {{/each}}
@@ -25,16 +26,16 @@
                 </div>
             </div>
             <hr>
-            <div class="col">
-                <div id="devoured">
+            <div class="col-6">
+                <h1>Eaten Burgers</h1>
+                <div class="devoured">
 
                     {{#each devoured}}
 
 
-                    <p>{{id}}</p>
 
 
-                    <p>Burger: {{burgerName}}</p>
+                    <p>{{burgerName}}</p>
 
 
 
@@ -52,7 +53,7 @@
 </div>
 <div id="inputAndSubmit">
     <div id="input">
-        <div class="input-group flex-nowrap">
+        <div id= "inputGroup" class="input-group flex-nowrap">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="addon-wrapping">Type Here!</span>
             </div>
